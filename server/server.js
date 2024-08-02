@@ -23,7 +23,7 @@ const db = mysql.createConnection({
     host:'localhost',
     user:'root',
     password:'',
-    database:"project-nandur"
+    database:"projectnandur"
 });
 
 db.connect(err => {
@@ -31,18 +31,18 @@ db.connect(err => {
         throw err;
     }
     console.log('Connected to database');
-})
+});
 
 app.use(cors());
 app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
     res.json({ message: "Hello from backend!"});
-})
+});
 
 app.listen(PORT, () => {
     console.log(`Server started at port ${PORT}`);
-})
+});
 
 // saving data from dht22 into sql database
 app.post('/save-data', (req, res) => {
@@ -55,5 +55,5 @@ app.post('/save-data', (req, res) => {
             return;
         }
         res.status(200).send('Data saved successfully');
-    })
-})
+    });
+});
