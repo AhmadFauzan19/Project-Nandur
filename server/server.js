@@ -6,7 +6,14 @@ const cors = require('cors');
 const app = express();
 const PORT = 8080;
 
-// this code is use to synchronize db in every device
+const db = mysql.createConnection({
+    host:'localhost',
+    user:'root',
+    password:'',
+    database:"projectnandur"
+});
+
+// this code is use to synchronize db in every device (only for sequelize)
 // db synchronization
 // (async () => {
 //   try {
@@ -18,13 +25,6 @@ const PORT = 8080;
 //     console.error('Unable to connect to the database:', error);
 //   }
 // })();
-
-const db = mysql.createConnection({
-    host:'localhost',
-    user:'root',
-    password:'',
-    database:"projectnandur"
-});
 
 db.connect(err => {
     if (err) {
