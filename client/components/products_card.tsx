@@ -5,9 +5,10 @@ interface CardProps {
   title: string;
   description: string;
   imageUrl: string;
+  buttonUrl: string;
 }
 
-const Card: React.FC<CardProps> = ({ title, description, imageUrl }) => {
+const Card: React.FC<CardProps> = ({ title, description, imageUrl, buttonUrl }) => {
   return (
     <div className="w-40 rounded-xl shadow-lg m-4 py-4 px-4 lg:px-8 lg:w-80 lg:py-8">
       <img className="w-full rounded-xl" src={imageUrl} alt={title} height={36}/>

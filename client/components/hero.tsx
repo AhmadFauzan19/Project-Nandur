@@ -13,12 +13,12 @@ const hero = () => {
         <h1 className='text-white righteous text-5xl content-center lg:hidden'>Nandur</h1> 
         <div className='hidden lg:flex content-center'>
           <ul className='flex flex-row gap-24'>
-            <li className='roboto text-white content-center lg:text-xl'>Home</li>
-            <li className='roboto text-white content-center lg:text-xl'>Profile</li>
-            <li className='roboto text-white content-center lg:text-xl'>Products</li>
-            <li className='roboto text-white content-center lg:text-xl'>Guide</li>
+            <li className='roboto text-white content-center lg:text-xl'><a href='/'>Home</a></li>
+            <li className='roboto text-white content-center lg:text-xl'><a href='/'>Profile</a></li>
+            <li className='roboto text-white content-center lg:text-xl'><a href='/'>Products</a></li>
+            <li className='roboto text-white content-center lg:text-xl'><a href='/guide'>Guide</a></li>
             <li className='content-center'>
-              <a href='#'>
+              <a href='/profile'>
                 <Image src='/logo_profile.png' alt='profile logo' width={30} height={30} className='hidden lg:flex'></Image>
                 <Image src='/logo_profile.png' alt='profile logo' width={25} height={25} className='lg:hidden'></Image>
               </a>
