@@ -1,3 +1,4 @@
+import { Righteous } from "next/font/google";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -14,8 +15,13 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        'primary': '#1A4D2E',
-        'secondary': '#4F6F52'
+        primary: "#1A4D2E",
+        secondary: "#4F6F52",
+        gray: "#D9D9D9",
+      },
+      fontFamily: {
+        roboto: ["var(--font-roboto)", "sans-serif"],
+        righteous: ["var(--font-righteous)", "sans-serif"],
       },
     },
   },

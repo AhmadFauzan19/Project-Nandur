@@ -1,18 +1,18 @@
 import type { Metadata } from "next";
-import { Roboto, Righteous } from 'next/font/google';
+import { Roboto, Righteous } from "next/font/google";
 import "./globals.css";
-import Profile from '../components/profile';
-
+import Profile from "../components/profile";
+import { Toaster } from "react-hot-toast";
 const roboto_init = Roboto({
-  subsets: ['latin'],
-  weight: ['100', '300', '700'],
-  variable: '--font-roboto'
+  subsets: ["latin"],
+  weight: ["100", "300", "400", "700"],
+  variable: "--font-roboto",
 });
 
 const righteous_init = Righteous({
-  subsets: ['latin'],
-  weight: ['400'],
-  variable: '--font-righteous'
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-righteous",
 });
 
 export const metadata: Metadata = {
@@ -28,9 +28,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${roboto_init.variable} ${righteous_init.variable}`}>
-        <main className="relative overflow-hidden">
-          {children}
-        </main>
+        <main className="relative overflow-hidden">{children}</main>
+        <Toaster position="bottom-center" />
       </body>
     </html>
   );
