@@ -3,7 +3,7 @@ import Card from '@/components/products_card';
 
 const product = () => {
   return (
-    <div className='bg-white'>
+    <div id='product' className='bg-white'>
       <div className='flex flex-col w-full items-center pt-12'>
         <h1 className='roboto text-black text-4xl font-bold opacity-80 lg:text-6xl'>Nandur Horti Box</h1>
         <div className='flex flex-row justify-center w-full mt-6 lg:justify-evenly'>

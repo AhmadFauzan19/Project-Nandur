@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const hero = () => {
   return (
-    <div className="w-screen flex flex-col h-screen bg-primary">
+    <div id='home' className="w-screen flex flex-col h-screen bg-primary">
       <nav className='flex justify-between px-12 py-12 lg:px-48'>
         <div className='flex flex-row'>
           <Image src='/logo_nandur.png' alt='nandur logo' width={100} height={100} className='lg:hidden'></Image> 
@@ -13,9 +13,9 @@ const hero = () => {
         <h1 className='text-white righteous text-5xl content-center lg:hidden'>Nandur</h1> 
         <div className='hidden lg:flex content-center'>
           <ul className='flex flex-row gap-24'>
-            <li className='roboto text-white content-center lg:text-xl'><a href='/'>Home</a></li>
-            <li className='roboto text-white content-center lg:text-xl'><a href='/'>Profile</a></li>
-            <li className='roboto text-white content-center lg:text-xl'><a href='/'>Products</a></li>
+            <li className='roboto text-white content-center lg:text-xl'><a href='#home'>Home</a></li>
+            <li className='roboto text-white content-center lg:text-xl'><a href='#profile'>Profile</a></li>
+            <li className='roboto text-white content-center lg:text-xl'><a href='#product'>Products</a></li>
             <li className='roboto text-white content-center lg:text-xl'><a href='/guide'>Guide</a></li>
             <li className='content-center'>
               <a href='/profile'>

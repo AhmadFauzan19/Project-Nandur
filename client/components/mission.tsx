@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const mission = () => {
   return (
-    <div className='w-screen bg-white'>
+    <div id='profile' className='w-screen bg-white'>
       <div className='flex flex-col items-center px-12 pt-12 lg:px-96 lg:pt-20'>
         <h1 className='roboto text-black font-bold text-4xl opacity-75 text-center lg:text-6xl'>Our Mission</h1>
         <p className='roboto text-black text-sm opacity-75 text-center mt-4 lg:text-xl lg:px-48 lg:mt-8'>Our mission is to create a vibrant community where people can share their love for plants,  discover new gardening tips and tricks, and find innovative solutions to enhance their indoor  gardening experience. We aim to make plant care accessible, fun, and rewarding for everyone</p>
