@@ -1,12 +1,16 @@
 const express = require("express");
-
+const bodyParser = require("body-parser");
+const adminRoutes = require("./routes/AdminRoutes");
+const db = require("./config/db");
+const cors = require("cors");
 const app = express();
-const PORT = 8080;
 
-app.get("/", (req, res) => {
-    res.json({ message: "Hello from backend!"});
-});
+app.use(bodyParser.json());
+app.use(cors());
 
+app.use("/api/admin", adminRoutes);
+
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
-    console.log(`Server started at port ${PORT}`);
+  console.log(`Server is running on port ${PORT}`);
 });
